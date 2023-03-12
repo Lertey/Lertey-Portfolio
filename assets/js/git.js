@@ -7,8 +7,8 @@ async function getReposInfo(username) {
             "Authorization": `Bearer ${token}` // добавляем заголовок Authorization
         }
     });
+        console.log(data);
     const data = await response.json();
-    console.log(data);
     const obj = data.map(info => {
         return {
             full_name: info.full_name,
