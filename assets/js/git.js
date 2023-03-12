@@ -8,8 +8,8 @@ async function getReposInfo(username) {
         }
     });
     const data = await response.json();
-    const obj = map()
-    function map() {data.map(info => {
+
+    const obj = data.map(info => {
         return {
             full_name: info.full_name,
             html_url: info.html_url,
@@ -19,7 +19,6 @@ async function getReposInfo(username) {
             forks_count: info.forks_count
         };
     });
-}
 
     return obj;
 };
