@@ -8,6 +8,9 @@ async function getReposInfo(username) {
         }
     });
     const data = await response.json();
+    if (Array.isArray(data) != true) {
+        throw new Error(NOT CONNECTED TO GITHUB API - (${data.message}))
+    }
     const obj = data.map(info => {
         return {
             full_name: info.full_name,
