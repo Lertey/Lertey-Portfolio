@@ -23,7 +23,7 @@ async function getReposInfo(username) {
 };
 
 async function genTables() {
-    const username = "lertey";
+    const username = "Lertey";
     const repoNames = await getReposInfo(username);
     const body = document.getElementById("git-repos");
 
