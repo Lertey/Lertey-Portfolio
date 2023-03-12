@@ -8,7 +8,6 @@ async function getReposInfo(username) {
         }
     });
     const data = await response.json();
-    console.log(data)
     const obj = data.map(info => {
         return {
             full_name: info.full_name,
