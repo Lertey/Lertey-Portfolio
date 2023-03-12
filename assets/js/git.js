@@ -1,6 +1,6 @@
 async function getReposInfo(username) {
     const url = `https://api.github.com/users/${username}/repos`;
-    const token = "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"; // добавляем токен
+    const token = "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"; // добавляем токен
 
     const response = await fetch(url, {
         headers: {
@@ -8,7 +8,8 @@ async function getReposInfo(username) {
         }
     });
     const data = await response.json();
-    const obj = data.map(info => {
+    const obj = map()
+    function map() {data.map(info => {
         return {
             full_name: info.full_name,
             html_url: info.html_url,
@@ -18,7 +19,8 @@ async function getReposInfo(username) {
             forks_count: info.forks_count
         };
     });
-console.log(data);
+}
+
     return obj;
 };
 
