@@ -1,6 +1,6 @@
 async function getReposInfo(username) {
     const url = `https://api.github.com/users/${username}/repos`;
-    const token = "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"; // добавляем токен
+    const token = "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"; // добавляем токен
 
     const response = await fetch(url, {
         headers: {
